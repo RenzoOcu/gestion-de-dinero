@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+  --color-bg: #F7F7F5;
+  --color-surface: #FFFFFF;
+  --color-border: #E8E8E4;
+  --color-text-primary: #111111;
+  --color-text-secondary: #6B6B6B;
+  --color-text-muted: #A0A0A0;
+  --color-income: #16A34A;
+  --color-income-bg: #F0FDF4;
+  --color-expense: #DC2626;
+  --color-expense-bg: #FEF2F2;
+  --color-accent: #111111;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background-color: #F7F7F5;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Scrollbar minimalista */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #D0D0CC;
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #A0A09C;
+}
+
+/* Animación fade-in para modales */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.2s ease-out;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.25s ease-out;
+}
