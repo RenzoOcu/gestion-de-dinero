@@ -74,15 +74,7 @@ export default function TransactionsPage() {
               </div>
               <TransactionForm
                 onSuccess={handleFormSuccess}
-                initialData={editingTransaction ? {
-                  amount: Number(editingTransaction.amount),
-                  type: editingTransaction.type,
-                  category: editingTransaction.category,
-                  description: editingTransaction.description || '',
-                  date: editingTransaction.date
-                } : undefined}
-                isEditing={!!editingTransaction}
-                transactionId={editingTransaction?.id}
+                initialData={editingTransaction}
               />
             </div>
           </div>

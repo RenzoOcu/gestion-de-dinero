@@ -15,8 +15,8 @@ export function useAuth() {
   } as User)
   const [loading] = useState(false)
 
-  const signIn = async () => ({ error: null })
-  const signUp = async () => ({ error: null })
+  const signIn = async (email?: string, password?: string): Promise<{ error: { message: string } | null }> => ({ error: null })
+  const signUp = async (email?: string, password?: string): Promise<{ error: { message: string } | null }> => ({ error: null })
   const signOut = async () => {}
 
   return { user, loading, signIn, signUp, signOut }
